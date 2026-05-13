@@ -1,49 +1,15 @@
 import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
-// import './App.css'
+import './App.scss'
+import Layout from './components/Layout/Layout'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <body>
-
-      Healthy meals, zero fuss
-
-      Discover eight quick, whole-food recipes that you can cook
-      tonight—no processed junk, no guesswork.
-
-      Start exploring
-
-      What you'll get
-
-      Whole-food recipes
-      Each dish uses everyday, unprocessed ingredients.
-
-      Minimum fuss
-      All recipes are designed to make eating healthy quick and easy.
-
-      Search in seconds
-      Filter by name or ingredient and jump straight to the recipe you need.
-
-      Built for real life
-
-      Cooking shouldn't be complicated. These recipes come in under
-      30 minutes of active time, fit busy schedules, and taste good
-      enough to repeat.
-
-      Whether you're new to the kitchen or just need fresh ideas,
-      we've got you covered.
-
-      Ready to cook smarter?
-
-      Hit the button, pick a recipe, and get dinner on the table—fast.
-
-      Browse recipes
-
-      Made with ❤️ and 🥑
-
-    </body>
+    <Layout>
+      
+    </Layout>
   )
 }
 

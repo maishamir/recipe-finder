@@ -1,0 +1,7 @@
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/typography" as *;
+
+html {
+    background-color: $neutral100;
+    color: blue;
+}
