@@ -5,19 +5,23 @@ import Layout from './components/Layout/Layout'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
+import Recipes from './pages/Recipes/Recipes'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Layout>
-      <BrowserRouter>
+    <BrowserRouter>
+
+      <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/recipes" element={<Recipes />} />
         </Routes>
-      </BrowserRouter>
-    </Layout>
+      </Layout>
+    </BrowserRouter>
+
   )
 }
 
