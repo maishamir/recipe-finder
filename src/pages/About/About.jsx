@@ -1,6 +1,6 @@
 import React from 'react'
 import heroImg from "/assets/images/image-about-our-mission-small.webp";
-import beyondImg from "/assets/images/image-about-beyond-the-plate.webp";
+import beyondImg from '/assets/images/image-about-beyond-the-plate-small.webp';
 function About() {
     return (
         <div>
