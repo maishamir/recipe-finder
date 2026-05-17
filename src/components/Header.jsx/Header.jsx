@@ -15,7 +15,7 @@ function Header() {
                 {/* <h1>Healthy Recipe Finder</h1> */}
             </div>
             <button className="header__hamburger" onClick={() => setMenuIsOpen(!menuIsOpen)}><img src={hamburgerMenu} alt="" /></button>
-            <nav className='header__nav' className={menuIsOpen ? "header__nav--open" : "header__nav--closed"}>
+            <nav className={menuIsOpen ? "header__nav--open" : "header__nav--closed"}>
                 <ul>
                     <li className='header__nav-item'>Home</li>
                     <li className='header__nav-item'>About</li>
