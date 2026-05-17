@@ -1,0 +1,23 @@
+.recipes {
+
+    &__filter {
+        &-container {
+            position: relative;
+        }
+
+        &-button {
+        }
+        visibility: hidden;
+        position: absolute;
+
+        &--open {
+            visibility: visible;
+        }
+
+        &--closed {
+            display: none;
+        }
+    }
+
+
+}
