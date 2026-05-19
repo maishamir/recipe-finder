@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @font-face {
     font-family: "Nunito";
     src: url("/assets/fonts/Nunito/Nunito-Italic-VariableFont_wght.ttf") format('truetype');
@@ -22,7 +24,7 @@
 
 @font-face {
     font-family: "Nunito Sans";
-    src: url("/assets/fonts/Nunito_Sans/ NunitoSans-Italic-VariableFont.ttf") format('truetype');
+    src: url("/assets/fonts/Nunito_Sans/NunitoSans-Italic-VariableFont.ttf") format('truetype');
     font-weight: 100 900;
     font-style: italic;
 }
@@ -35,16 +37,19 @@
     font-size: 3.25rem;
     line-height: 110%;
     letter-spacing: -2px;
+    color: $neutral900;
 }
 
 .tp1-tab {
     @extend .tp1;
     font-size: 4rem;
+    color: $neutral900;
 }
 
 .tp-dk {
     @extend .tp1;
     font-size: 4.5rem;
+    color: $neutral900;
 }
 
 
@@ -55,11 +60,13 @@
     font-size: 2.5rem;
     line-height: 120%;
     letter-spacing: -2px;
+    color: $neutral900;
 }
 
 .tp2-tab {
     @extend .tp2;
     font-size: 3rem;
+    color: $neutral900;
 }
 
 .tp3 {
@@ -68,6 +75,7 @@
     font-size: 2rem;
     line-height: 130%;
     letter-spacing: -1px;
+    color: $neutral900;
 }
 
 .tp4 {
@@ -76,6 +84,7 @@
     font-size: 1.5rem;
     line-height: 130%;
     letter-spacing: -1px;
+    color: $neutral900;
 }
 
 
@@ -85,6 +94,7 @@
     font-size: 1.25rem;
     line-height: 140%;
     letter-spacing: -0.5px;
+    color: $neutral900;
 }
 
 .tp6 {
@@ -93,6 +103,7 @@
     font-size: 1.25rem;
     line-height: 150%;
     letter-spacing: -0.4px;
+    color: $neutral800;
 }
 
 .tp7 {
@@ -101,6 +112,7 @@
     font-size: 1.125rem;
     line-height: 150%;
     letter-spacing: -0.3px;
+    color: $neutral900;
 }
 
 .tp8 {
@@ -109,6 +121,7 @@
     font-size: 1rem;
     line-height: 150%;
     letter-spacing: -0.3px;
+    color: $neutral900;
 }
 
 .tp9 {
@@ -117,6 +130,7 @@
     font-size: 1rem;
     line-height: 150%;
     letter-spacing: -0.3px;
+    color: $neutral900;
 }
 
 .tp10 {
@@ -125,4 +139,5 @@
     font-size: 0.875rem;
     line-height: 150%;
     letter-spacing: -0.3px;
+    color: $neutral900;
 }
