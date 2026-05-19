@@ -1,21 +1,55 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
 .recipes {
+    &__hero {
+        padding: 3rem 0;
 
-    &__filter {
-        &-container {
-            position: relative;
+        &-title {
+            @extend .tp2;
+            margin-bottom: 0.75rem
         }
 
-        &-button {
+        &-text {
+            @extend .tp6;
         }
-        visibility: hidden;
-        position: absolute;
+    }
 
-        &--open {
-            visibility: visible;
-        }
+    &__filters {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
-        &--closed {
-            display: none;
+        &-search {
+            padding: 0.625rem 1rem;
+            padding-left: 2.75rem;
+            border: 1px solid $neutral300;
+            border-radius: 0.625rem;
+            @extend .tp7;
+            width: 100%;
+
+            &::placeholder {
+                font-size: 1.125rem;
+            }
+
+            &-wrapper {
+                position: relative;
+                margin-bottom: 1.5rem;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 1.25rem;
+                    width: 1.25rem;
+                    background-image: url("/assets/images/icon-search.svg");
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 1rem;
+                }
+            }
+
+
         }
     }
 
