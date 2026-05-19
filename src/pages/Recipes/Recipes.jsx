@@ -32,7 +32,7 @@ function Recipes() {
 
             <section className="recipes__board">
                 {recipeData.map(recipe => {
-                    return <RecipeCard key={recipe.id} title={recipe.overview} slug={recipe.slug} image={recipe.image.small} overview={recipe.overview} servings={recipe.servings} prepMinutes={recipe.prepMinutes} cookMinutes={recipe.cookMinutes} ingredients={recipe.ingredients} instructions={recipe.instructions} />
+                    return <RecipeCard key={recipe.id} title={recipe.title} slug={recipe.slug} image={recipe.image.small} overview={recipe.overview} servings={recipe.servings} prepMinutes={recipe.prepMinutes} cookMinutes={recipe.cookMinutes} ingredients={recipe.ingredients} instructions={recipe.instructions} />
                 })}
             </section>
         </div >
