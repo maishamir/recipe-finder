@@ -27,7 +27,11 @@ function RecipeDetails() {
     return (
         <div className="recipeDetails">
             <nav className="recipeDetails__breadcrumb"> <Link to="/recipes" className='recipe-page-link' scroll={false}>Recipes </Link> <span className='separator'>/</span> {title}</nav>
-            <img className="recipeDetails__image" src={image.small} alt="" />
+
+            <picture>
+                <source media="(min-width: 600px)" srcset={image.large} />
+                <img className="recipeDetails__image" src={image.small} alt="" />
+            </picture>
 
             <h1 className="recipeDetails__title">{title}</h1>
             <p className="recipeDetails__overview">{overview}</p>
@@ -65,7 +69,7 @@ function RecipeDetails() {
 
                 <div className="moreRecipes__recipes">
                     {moreRecipes.map(recipe => (
-                        <RecipeCard key={recipe.id} recipeId={recipe.id} title={recipe.title} slug={recipe.slug} image={recipe.image.small} overview={recipe.overview} servings={recipe.servings} prepMinutes={recipe.prepMinutes} cookMinutes={recipe.cookMinutes} ingredients={recipe.ingredients} />
+                        <RecipeCard key={recipe.id} recipeId={recipe.id} title={recipe.title} slug={recipe.slug} image={recipe.image} overview={recipe.overview} servings={recipe.servings} prepMinutes={recipe.prepMinutes} cookMinutes={recipe.cookMinutes} ingredients={recipe.ingredients} />
                     ))}
                 </div>
             </div>
