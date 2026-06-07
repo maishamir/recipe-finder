@@ -9,6 +9,7 @@ import realLifeImgTablet from "/assets/images/image-home-real-life-large.webp";
 import "./Home.scss";
 import squiggle from "/assets/images/pattern-squiggle-1.svg";
 import { useNavigate } from 'react-router';
+import ReadyCTA from '../../components/ReadyCTA/ReadyCTA';
 
 function Home() {
 
@@ -78,11 +79,7 @@ function Home() {
                 </picture>
             </section>
 
-            <section className="home__cta">
-                <h2 className='home__cta-title'>Ready to cook smarter?</h2>
-                <p className='home__cta-desc'>Hit the button, pick a recipe, and get dinner on the table&mdash;fast.</p>
-                <button className='home__cta-btn'>Browse recipes</button>
-            </section>
+            <ReadyCTA />
         </div>
     )
 }

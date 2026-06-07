@@ -1,8 +1,12 @@
 import React from 'react'
 import heroImg from "/assets/images/image-about-our-mission-small.webp";
+import heroImgLg from "/assets/images/image-about-our-mission-large.webp";
 import beyondImg from '/assets/images/image-about-beyond-the-plate-small.webp';
 import "./About.scss"
+import beyondImgLg from '/assets/images/image-about-beyond-the-plate-large.webp';
+import "./About.scss"
 import { useNavigate } from 'react-router';
+import ReadyCTA from '../../components/ReadyCTA/ReadyCTA';
 function About() {
 
     const navigate = useNavigate();
@@ -18,7 +22,10 @@ function About() {
                     <p className="about__hero-text">We showcase quick, whole-food dishes that anyone can muster&mdash;no fancy equipment, no ultra-processed shortcuts&mdash;just honest ingredients and straightforward steps.</p>
                 </div>
 
-                <img className="about__hero-img" src={heroImg} alt="" />
+                <picture>
+                    <source media="(min-width: 600px)" srcset={heroImgLg} />
+                    <img className="about__hero-img" src={heroImg} alt="" />
+                </picture>
             </section>
 
             <section className="about__why">
@@ -68,14 +75,19 @@ function About() {
                     <li className="about__beyondPlate-item">Reduce reliance on single-use packaging and delivery waste.</li>
                     <li className="about__beyondPlate-item">Spark curiosity about seasonal produce and local agriculture.</li>
                 </ul>
-                <img className="about__beyondPlate-img" src={beyondImg} alt="" />
+                <picture>
+                    <source media="(min-width: 600px )" srcset={beyondImgLg} />
+                    <img className="about__beyondPlate-img" src={beyondImg} alt="" />
+                </picture>
             </section>
 
-            <section className="about__cta">
+            {/* <section className="about__cta">
                 <h2 className="about__cta-title">Ready to cook smarter?</h2>
                 <p className="about__cta-text">Hit the button, pick a recipe, and get dinner on the table&mdash;fast.</p>
                 <button className="about__cta-btn" onClick={() => navigate("/recipes")}>Browse recipes</button>
-            </section>
+            </section> */}
+
+            <ReadyCTA />
         </div>
     )
 }

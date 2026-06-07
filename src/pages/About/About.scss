@@ -1,5 +1,6 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .about {
     &__hero {
@@ -17,6 +18,10 @@
         &-title {
             @include tp2;
             margin-bottom: 1.5rem;
+
+            @include tablet {
+                @include tp2-tab;
+            }
         }
 
         &-text {
@@ -37,25 +42,29 @@
         padding: 3rem 0;
         position: relative;
 
+        @include tablet {
+            padding: 5rem 0;
+        }
+
         &::before {
+
             content: "";
-            height: 1px;
             top: 0;
             position: absolute;
+            height: 1px;
             background-color: $neutral300;
-            width: calc(100% + 2rem);
-            left: -1rem;
-
+            left: -2rem;
+            right: -2rem;
         }
 
         &::after {
             content: "";
-            background-color: $neutral300;
-            height: 1px;
-            width: calc(100% + 2rem);
-            position: absolute;
             bottom: 0;
-            left: -1rem;
+            position: absolute;
+            height: 1px;
+            background-color: $neutral300;
+            left: -2rem;
+            right: -2rem;
         }
 
 
@@ -109,9 +118,17 @@
         padding: 3rem 0;
         position: relative;
 
+        @include tablet {
+            padding: 5rem 0
+        }
+
         &-title {
             @include tp2;
             margin-bottom: 2.5rem;
+
+            @include tablet {
+                @include tp2-tab;
+            }
         }
 
         &-list {
@@ -153,12 +170,12 @@
 
         &::after {
             content: "";
-            background-color: $neutral300;
-            height: 1px;
-            width: calc(100% + 2rem);
-            position: absolute;
             bottom: 0;
-            left: -1rem;
+            position: absolute;
+            height: 1px;
+            background-color: $neutral300;
+            left: -2rem;
+            right: -2rem;
         }
     }
 
@@ -167,7 +184,11 @@
 
         &-title {
             @include tp2;
-            margin-bottom: 1.25rem
+            margin-bottom: 1.25rem;
+
+            @include tablet {
+                @include tp2-tab;
+            }
         }
 
         &-text {
@@ -184,36 +205,7 @@
             margin-top: 2rem;
             width: 100%;
             border-radius: 0.75rem;
-        }
-    }
-
-    &__cta {
-        background-color: $neutral200;
-        padding: 3rem 1rem;
-        border-radius: 1rem;
-        text-align: center;
-
-        &-title {
-            @include tp2;
-            margin-bottom: 0.75rem
-        }
-
-        &-text {
-            @include tp6;
-            margin-bottom: 2rem;
-        }
-
-        &-btn {
-            padding: 0.625rem;
-            border-radius: 0.625rem;
-            background-color: $neutral900;
-            color: white;
-            font-family: 'Nunito', sans-serif;
-            font-weight: bold;
-            font-size: 1.125rem;
-            line-height: 140%;
-            border: none;
-
+            
         }
     }
 }
