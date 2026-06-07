@@ -9,9 +9,11 @@ function Recipes() {
     const [isPrepOpen, setIsPrepOpen] = useState(false)
     const [isCookOpen, setIsCookOpen] = useState(false)
 
-    function toggleMenu() {
+    const [searchQuery, setSearchQuery] = useState("");
 
-    }
+    const filteredRecipes = recipeData.filter(recipe => recipe.title.toLowerCase().includes(searchQuery.toLowerCase()));
+    console.log(filteredRecipes);
+    
 
 
     return (
@@ -26,14 +28,17 @@ function Recipes() {
                 <RecipeFilter choices={[0, 5, 10, 15, 20]} label="Max Cook Time" isOpen={isCookOpen} toggleButton={() => setIsCookOpen(!isCookOpen)} name={"cookTime"} />
 
                 <div className="recipes__filters-search-wrapper">
-                    <input className="recipes__filters-search" type="text" name="" id="" placeholder='Search by name or ingredient...' />
+                    <input className="recipes__filters-search" type="text" name="" id="" placeholder='Search by name or ingredient...' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                 </div>
             </section>
 
             <section className="recipes__board">
-                {recipeData.map(recipe => {
-                    return <RecipeCard key={recipe.id} recipeId={recipe.id}  title={recipe.title} slug={recipe.slug} image={recipe.image.small} overview={recipe.overview} servings={recipe.servings} prepMinutes={recipe.prepMinutes} cookMinutes={recipe.cookMinutes} ingredients={recipe.ingredients} instructions={recipe.instructions} />
+
+                {(filteredRecipes.length === 0 && searchQuery !== "") ? <p>No recipes match your search</p> : filteredRecipes.map(recipe => {
+                    return <RecipeCard key={recipe.id} recipeId={recipe.id} title={recipe.title} slug={recipe.slug} image={recipe.image.small} overview={recipe.overview} servings={recipe.servings} prepMinutes={recipe.prepMinutes} cookMinutes={recipe.cookMinutes} />
                 })}
+
+
             </section>
         </div >
     )
