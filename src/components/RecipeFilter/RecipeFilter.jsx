@@ -2,7 +2,7 @@ import React from 'react'
 import chevronDown from '/assets/images/icon-chevron-down.svg';
 import "./RecipeFilter.scss";
 
-function RecipeFilter({ choices = [], label = "", toggleButton, isOpen, name = "" }) {
+function RecipeFilter({ choices = [], label = "", toggleButton, isOpen, name = "", setTime, selectedValue }) {
 
     return (
         <div className="recipeFilter">
@@ -13,13 +13,13 @@ function RecipeFilter({ choices = [], label = "", toggleButton, isOpen, name = "
                     {choices.map((choice, index) => {
                         return (
                             <div className="recipeFilter__option">
-                                <input type="radio" id={`${name}-${choice}`} name={name} value={choice} />
+                                <input type="radio" id={`${name}-${choice}`} name={name} value={choice} onChange={() => setTime(choice)} checked={choice === selectedValue} />
                                 <label htmlFor={`${name}-${choice}`}>{choice} minutes</label>
                             </div>
                         )
                     })}
                 </div>
-                <small>Clear</small>
+                <small onClick={() => setTime(null)}>Clear filters</small>
             </div>
         </div>
     )
