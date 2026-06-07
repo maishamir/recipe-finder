@@ -40,6 +40,7 @@
     &__credit {
         @include tp9;
         color: $neutral900;
+        text-align: center;
 
         @include tablet {
             order: -1;
