@@ -6,12 +6,12 @@
         padding: 3rem 0;
 
         &-title {
-            @extend .tp2;
+            @include tp2;
             margin-bottom: 0.75rem
         }
 
         &-text {
-            @extend .tp6;
+            @include tp6;
         }
     }
 
@@ -25,7 +25,7 @@
             padding-left: 2.75rem;
             border: 1px solid $neutral300;
             border-radius: 0.625rem;
-            @extend .tp7;
+            @include tp7;
             width: 100%;
 
             &::placeholder {

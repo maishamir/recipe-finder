@@ -31,7 +31,7 @@
 
 
 
-.tp1 {
+@mixin tp1 {
     font-family: 'Nunito', sans-serif;
     font-weight: 800;
     font-size: 3.25rem;
@@ -40,21 +40,30 @@
     color: $neutral900;
 }
 
-.tp1-tab {
-    @extend .tp1;
+@mixin tp1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 3.25rem;
+    line-height: 110%;
+    letter-spacing: -2px;
+    color: $neutral900;
+}
+
+@mixin tp1-tab {
+    @include tp1;
     font-size: 4rem;
     color: $neutral900;
 }
 
-.tp-dk {
-    @extend .tp1;
+@mixin tp-dk {
+    @include tp1;
     font-size: 4.5rem;
     color: $neutral900;
 }
 
 
 
-.tp2 {
+@mixin tp2 {
     font-family: 'Nunito', sans-serif;
     font-weight: 800;
     font-size: 2.5rem;
@@ -63,13 +72,23 @@
     color: $neutral900;
 }
 
-.tp2-tab {
-    @extend .tp2;
+@mixin tp2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 120%;
+    letter-spacing: -2px;
+    color: $neutral900;
+}
+
+
+@mixin tp2-tab {
+    @include tp2;
     font-size: 3rem;
     color: $neutral900;
 }
 
-.tp3 {
+@mixin tp3 {
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 2rem;
@@ -78,7 +97,7 @@
     color: $neutral900;
 }
 
-.tp4 {
+@mixin tp4 {
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
@@ -88,7 +107,7 @@
 }
 
 
-.tp5 {
+@mixin tp5 {
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
@@ -97,7 +116,7 @@
     color: $neutral900;
 }
 
-.tp6 {
+@mixin tp6 {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
@@ -106,7 +125,7 @@
     color: $neutral800;
 }
 
-.tp7 {
+@mixin tp7 {
     font-family: "Nunito", sans-serif;
     font-weight: 600;
     font-size: 1.125rem;
@@ -115,7 +134,7 @@
     color: $neutral900;
 }
 
-.tp8 {
+@mixin tp8 {
     font-family: "Nunito Sans", sans-serif;
     font-weight: 700;
     font-size: 1rem;
@@ -124,7 +143,7 @@
     color: $neutral900;
 }
 
-.tp9 {
+@mixin tp9 {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 500;
     font-size: 1rem;
@@ -133,7 +152,7 @@
     color: $neutral900;
 }
 
-.tp10 {
+@mixin tp10 {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 700;
     font-size: 0.875rem;

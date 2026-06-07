@@ -16,12 +16,12 @@
 
     &__title {
         margin-top: 1rem;
-        @extend .tp5;
+        @include tp5;
     }
 
     &__overview {
         margin-top: 0.625rem;
-        @extend .tp9;
+        @include tp9;
     }
 
     &__stats {
@@ -42,7 +42,7 @@
             }
 
             p {
-                @extend .tp9;
+                @include tp9;
             }
         }
     }
@@ -58,6 +58,6 @@
         display: block;
         text-align: center;
         text-decoration: none;
-        @extend .tp8;
+        @include tp8;
     }
 }

@@ -1,13 +1,18 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .home {
     &__hero {
         margin-top: 3rem;
 
         &-title {
-            @extend .tp1;
+            @include tp2;
             margin-bottom: 1rem;
+
+            @include tablet {
+                @include tp1-tab;
+            }
         }
 
         .healthy {
@@ -29,12 +34,12 @@
         }
 
         &-subtitle {
-            @extend .tp6;
+            @include tp6;
             margin-bottom: 2rem
         }
 
         &-cta {
-            @extend .tp5;
+            @include tp5;
             background-color: $neutral900;
             border: none;
             color: white;
@@ -70,8 +75,28 @@
     &__features {
         padding-top: 4rem;
 
+        @include tablet {
+            // border: 1px solid grey;
+            padding-bottom: 5rem;
+            position: relative;
+
+            &::after {
+                content: "";
+                height: 1px;
+                position: absolute;
+                left: -2rem;
+                right: -2rem;
+                bottom: 0;
+                background-color: $neutral300
+            }
+        }
+
         &-title {
-            @extend .tp2;
+            @include tp2;
+
+            @include tablet {
+                @include tp2-tab;
+            }
         }
 
         &-list {
@@ -84,6 +109,7 @@
     }
 
     &__feature {
+
 
         &-icon {
             height: 3.75rem;
@@ -98,12 +124,12 @@
         }
 
         &-name {
-            @extend .tp3;
+            @include tp3;
             margin-bottom: 0.75rem;
         }
 
         &-desc {
-            @extend .tp6;
+            @include tp6;
         }
     }
 
@@ -111,13 +137,44 @@
     &__real-life {
         margin-top: 4rem;
 
+        .half-hour {
+            font-weight: bold;
+
+            @include tablet {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 40%;
+                    width: 105%;
+                    background-color: $orange500;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 0.6rem;
+                    border-radius: 0.25rem;
+                    z-index: -1000;
+
+                }
+            }
+        }
+
+        @include tablet {
+            margin-top: 5rem;
+        }
+
         &-title {
-            @extend .tp2;
-            margin-bottom: 1.25rem
+            @include tp2;
+            margin-bottom: 1.25rem;
+
+            @include tablet {
+                @include tp2-tab;
+            }
+
         }
 
         &-desc {
-            @extend .tp6;
+            @include tp6;
             display: flex;
             flex-direction: column;
             gap: 1.25rem;
@@ -137,14 +194,58 @@
         border-radius: 1rem;
         margin-top: 4rem;
 
+        @include tablet {
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 10rem;
+                width: 10rem;
+                top: -3rem;
+                right: -1rem;
+                background-image: url("/assets/images/pattern-knife.svg");
+                background-size: cover;
+                // z-index: 0;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                height: 10rem;
+                width: 10rem;
+                bottom: -0.5rem;
+                left: 0;
+                background-image: url("/assets/images/pattern-fork.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                left: -1rem;
+
+            }
+
+        }
+
+
         &-title {
-            @extend .tp2;
-            margin-bottom: 0.75rem
+            @include tp2;
+            margin-bottom: 0.75rem;
+
+            @include tablet {
+                @include tp2-tab;
+                position: relative;
+                z-index: 2;
+            }
         }
 
         &-desc {
-            @extend .tp6;
+            @include tp6;
             margin-bottom: 2rem;
+
+            @include tablet {
+                position: relative;
+                z-index: 2;
+            }
         }
 
         &-btn {
@@ -157,6 +258,12 @@
             color: white;
             border: none;
             border-radius: 0.625rem;
+
+
+            @include tablet {
+                position: relative;
+                z-index: 2;
+            }
         }
     }
 }

@@ -3,7 +3,9 @@ import heroImg from "/assets/images/image-home-hero-small.webp";
 import carrotIcon from "/assets/images/icon-whole-food-recipes.svg";
 import boltIcon from "/assets/images/icon-minimum-fuss.svg";
 import searchIcon from "/assets/images/icon-search-in-seconds.svg";
-import realLifeImg from "/assets/images/image-home-real-life-small.webp";
+import realLifeImgDefault from "/assets/images/image-home-real-life-small.webp";
+import realLifeImgTablet from "/assets/images/image-home-real-life-large.webp";
+// import realLifeImgTablet from "/assets/images/salmon-asparagus-large.webp";
 import "./Home.scss";
 import squiggle from "/assets/images/pattern-squiggle-1.svg";
 import { useNavigate } from 'react-router';
@@ -63,12 +65,17 @@ function Home() {
             <section className="home__real-life">
                 <h2 className='home__real-life-title'>Built for real life</h2>
                 <div className="home__real-life-desc">
-                    <p>Cooking should be complicated. These recipes come in under <strong>30 minutes</strong> of active time, fit busy schedules, and taste good enough to repeat.</p>
+                    <p>Cooking shouldn't be complicated. These recipes come in under <span className='half-hour'>30 minutes</span> of active time, fit busy schedules, and taste good enough to repeat.</p>
                     <p>Whether you're new to the kitchen or just need fresh ideas, we've got you covered.</p>
                 </div>
 
 
-                <img className="home__real-life-img" src={realLifeImg} alt="" />
+                <picture>
+                    <source media='(min-width: 600px)' srcSet={realLifeImgTablet} />
+
+                    <img className="home__real-life-img" src={realLifeImgDefault} alt="" />
+
+                </picture>
             </section>
 
             <section className="home__cta">

@@ -14,7 +14,7 @@
         background-color: white;
         border: 1px solid $neutral300;
         border-radius: 0.625rem;
-        @extend .tp7;
+        @include tp7;
     }
 
     &__filters {
@@ -23,7 +23,7 @@
         top: calc(100% + 0.25rem);
 
         color: $strong950;
-        @extend .tp7;
+        @include tp7;
         background-color: white;
         z-index: 100;
         padding: 0.5rem;

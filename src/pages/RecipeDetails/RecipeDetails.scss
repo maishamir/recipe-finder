@@ -5,11 +5,12 @@
 .recipeDetails {
 
     &__breadcrumb {
-        @extend .tp7;
+        @include tp7;
         margin-top: 2rem;
 
-        .recipe-page-link , .separator {
-            @extend .tp7;
+        .recipe-page-link,
+        .separator {
+            @include tp7;
             text-decoration: none;
             opacity: 0.75;
         }
@@ -22,13 +23,13 @@
     }
 
     &__title {
-        @extend .tp2;
+        @include tp2;
         margin-top: 2.25rem;
     }
 
 
     &__overview {
-        @extend .tp6;
+        @include tp6;
         margin: 1.25rem 0;
     }
 
@@ -40,7 +41,7 @@
         gap: 0.5rem;
 
         &-item {
-            @extend .tp7;
+            @include tp7;
             display: flex;
             gap: 0.375rem;
             flex: 1 1 40%;
@@ -56,7 +57,7 @@
     &__ingredients {
 
         &-title {
-            @extend .tp4;
+            @include tp4;
             margin-bottom: 1rem;
         }
 
@@ -71,8 +72,8 @@
         }
 
         &-item {
-            // @extend .tp6;
-            @extend .tp6;
+            // @include  tp6;
+            @include tp6;
             display: flex;
             align-items: flex-start;
             padding-left: 2rem;
@@ -94,8 +95,9 @@
 
     &__instructions {
         padding-bottom: 3rem;
+
         &-title {
-            @extend .tp4;
+            @include tp4;
             margin-bottom: 1rem;
         }
 
@@ -109,7 +111,7 @@
         }
 
         &-step {
-            @extend .tp6;
+            @include tp6;
             display: flex;
             align-items: flex-start;
             padding-left: 2rem;
@@ -135,7 +137,7 @@
 
     &__title {
         margin-bottom: 1.5rem;
-        @extend .tp3;
+        @include tp3;
     }
 
     &__recipes {
