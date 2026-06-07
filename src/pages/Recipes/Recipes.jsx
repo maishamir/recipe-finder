@@ -25,8 +25,8 @@ function Recipes() {
             </section>
 
             <section className="recipes__filters">
-                <RecipeFilter choices={[0, 5, 10]} label="Max Prep Time" isOpen={isPrepOpen} toggleButton={() => setIsPrepOpen(!isPrepOpen)} name={"prepTime"} setTime={setMaxPrepTime} selectedValue={maxPrepTime} />
-                <RecipeFilter choices={[0, 5, 10, 15, 20]} label="Max Cook Time" isOpen={isCookOpen} toggleButton={() => setIsCookOpen(!isCookOpen)} name={"cookTime"} setTime={setMaxCookTime} selectedValue={maxCookTime}/>
+                <RecipeFilter choices={[0, 5, 10]} label="Max Prep Time" isOpen={isPrepOpen} toggleButton={() => setIsPrepOpen(!isPrepOpen)} name={"prepTime"} setTime={setMaxPrepTime} selectedValue={maxPrepTime} close={() => setIsPrepOpen(false)}/>
+                <RecipeFilter choices={[0, 5, 10, 15, 20]} label="Max Cook Time" isOpen={isCookOpen} toggleButton={() => setIsCookOpen(!isCookOpen)} name={"cookTime"} setTime={setMaxCookTime} selectedValue={maxCookTime} close={() => setIsCookOpen(false)}/>
 
                 <div className="recipes__filters-search-wrapper">
                     <input className="recipes__filters-search" type="text" name="" id="" placeholder='Search by name or ingredient...' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
