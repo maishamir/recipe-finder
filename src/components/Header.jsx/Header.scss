@@ -12,7 +12,9 @@
     font-family: cursive;
     z-index: 1000;
 
-    // &__logo {}
+    @include tablet {
+        align-items: center;
+    }
 
     &__hamburger {
         display: block;
@@ -22,8 +24,9 @@
         width: 2.5rem;
         border-radius: 0.25rem;
 
+        
 
-        @include tablet {
+        @include desktop {
             display: none;
         }
     }

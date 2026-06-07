@@ -27,7 +27,7 @@ function RecipeCard({ recipeId, title, slug, image, overview, servings, prepMinu
                     <p>Cook: {cookMinutes} minute{(cookMinutes > 1 || cookMinutes === 0) && 's'} </p>
                 </div>
             </div>
-            <Link to={`/recipes/${recipeId}`} className="recipeCard__link">View Recipe</Link>
+he            <Link to={`/recipes/${recipeId}`} className="recipeCard__link">View Recipe</Link>
         </div>
     )
 }
