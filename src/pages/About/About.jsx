@@ -2,7 +2,11 @@ import React from 'react'
 import heroImg from "/assets/images/image-about-our-mission-small.webp";
 import beyondImg from '/assets/images/image-about-beyond-the-plate-small.webp';
 import "./About.scss"
+import { useNavigate } from 'react-router';
 function About() {
+
+    const navigate = useNavigate();
+
     return (
         <div className="about">
             <section className="about__hero">
@@ -70,7 +74,7 @@ function About() {
             <section className="about__cta">
                 <h2 className="about__cta-title">Ready to cook smarter?</h2>
                 <p className="about__cta-text">Hit the button, pick a recipe, and get dinner on the table&mdash;fast.</p>
-                <button className="about__cta-btn">Browse recipes</button>
+                <button className="about__cta-btn" onClick={() => navigate("/recipes")}>Browse recipes</button>
             </section>
         </div>
     )

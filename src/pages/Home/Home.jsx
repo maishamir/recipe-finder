@@ -6,14 +6,18 @@ import searchIcon from "/assets/images/icon-search-in-seconds.svg";
 import realLifeImg from "/assets/images/image-home-real-life-small.webp";
 import "./Home.scss";
 import squiggle from "/assets/images/pattern-squiggle-1.svg";
+import { useNavigate } from 'react-router';
 
 function Home() {
+
+    const navigate = useNavigate();
+
     return (
         <div className='home'>
             <section className='home__hero'>
                 <h1 className='home__hero-title'><span className="healthy">Healthy</span> meals, zero fuss</h1>
                 <p className='home__hero-subtitle'>Discover eight quick, whole-food recipes that you can cook tonight&mdash;no processed junk, no guesswork.</p>
-                <button className='home__hero-cta'>Start exploring</button>
+                <button className='home__hero-cta' onClick={() => navigate("/recipes")}>Start exploring</button>
 
                 <div className="home__hero-img">
                     <img src={squiggle} className="squiggle" alt="" />

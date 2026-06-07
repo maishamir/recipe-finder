@@ -28,7 +28,7 @@ function RecipeCard({ recipeId, title, slug, image, overview, servings, prepMinu
                 </div>
             </div>
             {/* <button to={`/recipes/${recipeId}`} className="recipeCard__btn">View Recipe</button> */}
-            <Link to={`/recipes/${recipeId}`} className="recipeCard__link">View Recipe</Link>
+            <Link to={`/recipes/${recipeId}`} className="recipeCard__link" scroll={false}>View Recipe</Link>
         </div>
     )
 }

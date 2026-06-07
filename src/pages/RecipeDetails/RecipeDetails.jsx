@@ -26,7 +26,7 @@ function RecipeDetails() {
 
     return (
         <div className="recipeDetails">
-            <nav className="recipeDetails__breadcrumb"> <Link to="/recipes" className='recipe-page-link'>Recipes </Link> <span className='separator'>/</span> {title}</nav>
+            <nav className="recipeDetails__breadcrumb"> <Link to="/recipes" className='recipe-page-link' scroll={false}>Recipes </Link> <span className='separator'>/</span> {title}</nav>
             <img className="recipeDetails__image" src={image.small} alt="" />
 
             <h1 className="recipeDetails__title">{title}</h1>
