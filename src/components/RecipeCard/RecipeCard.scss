@@ -1,5 +1,6 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .recipeCard {
     background-color: white;
@@ -10,9 +11,17 @@
     &__image {
         width: 100%;
         border-radius: 0.625rem;
+
+        @include tablet {
+            height: 28rem;
+            object-fit: cover;
+        }
+
     }
 
-    &__desc {}
+    &__desc {
+        padding: 0 1rem;
+    }
 
     &__title {
         margin-top: 1rem;
@@ -28,12 +37,17 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0.5rem;
-        margin: 1rem 0.5rem 0 0.5rem;
+        margin: 1rem 0.5rem 1rem 0.5rem;
+
+        @include tablet {
+            display: flex;
+            justify-content: flex-start;
+        }
 
         &-item {
             display: flex;
             gap: 0.375rem;
-            flex: 1 1 40%;
+            // flex: 1 1 40%;
             align-items: center;
 
             img {

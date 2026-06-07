@@ -5,10 +5,13 @@ import cookIcon from "/assets/images/icon-cook-time.svg";
 import { Link } from 'react-router';
 import "./RecipeCard.scss";
 
-function RecipeCard({ recipeId, title, slug, image, overview, servings, prepMinutes, cookMinutes }) {
+function RecipeCard({ recipeId, title, slug, image, overview, servings, prepMinutes, cookMinutes, ingredients, instructions }) {
     return (
         <div className="recipeCard">
-            <img className="recipeCard__image" src={image} alt={title} />
+            <picture>
+                <source media="(min-width: 600px)" srcset={image.large} />
+                <img src={image.small} className='recipeCard__image'/>
+            </picture>
             <div className="recipeCard__desc">
                 <h3 className="recipeCard__title">{title}</h3>
                 <p className="recipeCard__overview">{overview}</p>
@@ -27,7 +30,7 @@ function RecipeCard({ recipeId, title, slug, image, overview, servings, prepMinu
                     <p>Cook: {cookMinutes} minute{(cookMinutes > 1 || cookMinutes === 0) && 's'} </p>
                 </div>
             </div>
-he            <Link to={`/recipes/${recipeId}`} className="recipeCard__link">View Recipe</Link>
+            <Link to={`/recipes/${recipeId}`} className="recipeCard__link">View Recipe</Link>
         </div>
     )
 }

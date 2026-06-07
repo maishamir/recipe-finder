@@ -14,7 +14,7 @@ function Recipes() {
     const [searchQuery, setSearchQuery] = useState("");
 
     const filteredRecipes = recipeData.filter(recipe => recipe.title.toLowerCase().includes(searchQuery.toLowerCase())).filter(recipe => maxPrepTime === null || recipe.prepMinutes <= maxPrepTime).filter(recipe => maxCookTime === null || recipe.cookMinutes <= maxCookTime);
-
+    
 
 
     return (
@@ -36,7 +36,7 @@ function Recipes() {
             <section className="recipes__board">
 
                 {(filteredRecipes.length === 0 && searchQuery !== "") ? <p>No recipes match your search</p> : filteredRecipes.map(recipe => {
-                    return <RecipeCard key={recipe.id} recipeId={recipe.id} title={recipe.title} slug={recipe.slug} image={recipe.image.small} overview={recipe.overview} servings={recipe.servings} prepMinutes={recipe.prepMinutes} cookMinutes={recipe.cookMinutes} />
+                    return <RecipeCard key={recipe.id} recipeId={recipe.id} title={recipe.title} slug={recipe.slug} image={recipe.image} overview={recipe.overview} servings={recipe.servings} prepMinutes={recipe.prepMinutes} cookMinutes={recipe.cookMinutes} />
                 })}
 
 
