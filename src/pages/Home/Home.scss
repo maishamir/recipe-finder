@@ -197,6 +197,7 @@
         @include tablet {
             position: relative;
             overflow: hidden;
+            margin-top: 5rem;
 
             &::before {
                 position: absolute;
