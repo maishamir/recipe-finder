@@ -20,9 +20,9 @@ function Header() {
             <nav className={menuIsOpen ? "header__nav--open" : "header__nav--closed"}>
                 <ul>
                     <li className='header__nav-item'>
-                        <Link to={"/"} scroll={false}>Home</Link>    </li>
+                        <Link to={"/"}>Home</Link>    </li>
                     <li className='header__nav-item'>
-                        <Link to={'/about'} scroll={false}>About</Link>
+                        <Link to={'/about'}>About</Link>
                     </li>
                     <button className='header__browse'>Browse Recipes</button>
                 </ul>
