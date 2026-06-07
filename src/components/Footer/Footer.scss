@@ -1,5 +1,6 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .footer {
     display: flex;
@@ -7,6 +8,24 @@
     justify-self: center;
     gap: 1.5rem;
     padding: 2rem 1rem 1.25rem 1rem;
+    width: 100%;
+    position: relative;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2.5rem 2rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -2rem;
+            right: -2rem;
+            height: 1px;
+            background-color: $neutral300;
+        }
+    }
 
     ul {
         display: flex;
@@ -21,5 +40,9 @@
     &__credit {
         @include tp9;
         color: $neutral900;
+
+        @include tablet {
+            order: -1;
+        }
     }
 }
