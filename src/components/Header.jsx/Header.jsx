@@ -14,7 +14,6 @@ function Header() {
         <header className='header'>
             <div className="header__logo">
                 <img src={logo} alt="" onClick={() => navigate("/")} />
-                {/* <h1>Healthy Recipe Finder</h1> */}
             </div>
             <button className="header__hamburger" onClick={() => setMenuIsOpen(!menuIsOpen)}><img src={hamburgerMenu} alt="" /></button>
             <nav className={menuIsOpen ? "header__nav--open" : "header__nav--closed"}>
@@ -27,6 +26,18 @@ function Header() {
                     <button className='header__browse'>Browse Recipes</button>
                 </ul>
             </nav>
+
+            <nav className='header__menu'>
+                <ul>
+                    <li className='header__menu-item'>Home</li>
+                    <li className='header__menu-item'>About</li>
+                    <li className='header__menu-item'>Recipes</li>
+                </ul>
+
+            </nav>
+
+            <button className='header__browseRecipes'>Browse Recipes</button>
+
         </header>
     )
 }
