@@ -27,6 +27,10 @@
         }
     }
 
+    @include desktop {
+        padding: 2.5rem 7.75rem;
+    }
+
     ul {
         display: flex;
         justify-content: center;
