@@ -14,12 +14,14 @@ function About() {
     return (
         <div className="about">
             <section className="about__hero">
-                <small className="about__hero-label">Our mission</small>
-                <h1 className="about__hero-title">Help more people cook nourishing meals, more often.</h1>
-                <div className="about__hero-text">
-                    <p className="about__hero-text">Healthy Recipe Finder was created to prove that healthy eating can be convenient, affordable, and genuinely delicious.</p>
+                <div className="about__hero-content">
+                    <small className="about__hero-label">Our mission</small>
+                    <h1 className="about__hero-title">Help more people cook nourishing meals, more often.</h1>
+                    <div className="about__hero-text">
+                        <p className="about__hero-text">Healthy Recipe Finder was created to prove that healthy eating can be convenient, affordable, and genuinely delicious.</p>
 
-                    <p className="about__hero-text">We showcase quick, whole-food dishes that anyone can muster&mdash;no fancy equipment, no ultra-processed shortcuts&mdash;just honest ingredients and straightforward steps.</p>
+                        <p className="about__hero-text">We showcase quick, whole-food dishes that anyone can muster&mdash;no fancy equipment, no ultra-processed shortcuts&mdash;just honest ingredients and straightforward steps.</p>
+                    </div>
                 </div>
 
                 <picture>
@@ -68,13 +70,15 @@ function About() {
             </section>
 
             <section className="about__beyondPlate">
-                <h2 className="about__beyondPlate-title">Beyond the plate</h2>
-                <p className="about__beyondPlate-text">We believe food is a catalyst for community and well-being. By sharing approachable recipes, we hope to:</p>
-                <ul className="about__beyondPlate-list">
-                    <li className="about__beyondPlate-item">Encourage family dinners and social cooking.</li>
-                    <li className="about__beyondPlate-item">Reduce reliance on single-use packaging and delivery waste.</li>
-                    <li className="about__beyondPlate-item">Spark curiosity about seasonal produce and local agriculture.</li>
-                </ul>
+                <div className="about__beyondPlate-content">
+                    <h2 className="about__beyondPlate-title">Beyond the plate</h2>
+                    <p className="about__beyondPlate-text">We believe food is a catalyst for community and well-being. By sharing approachable recipes, we hope to:</p>
+                    <ul className="about__beyondPlate-list">
+                        <li className="about__beyondPlate-item">Encourage family dinners and social cooking.</li>
+                        <li className="about__beyondPlate-item">Reduce reliance on single-use packaging and delivery waste.</li>
+                        <li className="about__beyondPlate-item">Spark curiosity about seasonal produce and local agriculture.</li>
+                    </ul>
+                </div>
                 <picture>
                     <source media="(min-width: 600px )" srcset={beyondImgLg} />
                     <img className="about__beyondPlate-img" src={beyondImg} alt="" />

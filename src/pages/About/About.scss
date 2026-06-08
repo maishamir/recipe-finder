@@ -6,6 +6,12 @@
     &__hero {
         padding: 2rem 0 4rem 0;
 
+        @include desktop {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+        }
+
         &-label {
             @include tp5;
             background-color: $orange500;
@@ -46,15 +52,21 @@
             padding: 5rem 0;
         }
 
-        &::before {
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 4rem;
+        }
 
+        &::before {
+            
             content: "";
             top: 0;
             position: absolute;
             height: 1px;
             background-color: $neutral300;
-            left: -2rem;
-            right: -2rem;
+            width: 100vw;
+            left: 0; //not doing anything
         }
 
         &::after {
@@ -63,14 +75,20 @@
             position: absolute;
             height: 1px;
             background-color: $neutral300;
-            left: -2rem;
-            right: -2rem;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
 
         &-title {
             @include tp2;
             margin-bottom: 2.5rem;
+
+            @include desktop {
+                text-wrap: nowrap;
+                @include tp2-tab;
+            }
         }
 
         &-list {
@@ -120,6 +138,12 @@
 
         @include tablet {
             padding: 5rem 0
+        }
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 4rem;
         }
 
         &-title {
@@ -174,13 +198,20 @@
             position: absolute;
             height: 1px;
             background-color: $neutral300;
-            left: -2rem;
-            right: -2rem;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 
     &__beyondPlate {
         padding: 3rem 0rem;
+
+        @include desktop {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
 
         &-title {
             @include tp2;
