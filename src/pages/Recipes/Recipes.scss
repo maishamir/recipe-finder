@@ -121,7 +121,6 @@
         @include desktop {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            // @include maxWidthAndCenter;
         }
     }
 
