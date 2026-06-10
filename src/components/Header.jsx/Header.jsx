@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import "./Header.scss"
 import logo from "/assets/images/logo.svg"
 import hamburgerMenu from "/assets/images/icon-hamburger-menu.svg";
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 
 function Header() {
 
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
+    let activePage = location.pathname;
 
 
     return (
@@ -29,9 +31,9 @@ function Header() {
 
             <nav className='header__menu'>
                 <ul>
-                    <li className='header__menu-item'>Home</li>
-                    <li className='header__menu-item'>About</li>
-                    <li className='header__menu-item'>Recipes</li>
+                    <li className={`header__menu-item ${activePage === "/" ? "header__menu-item--active" : ""}`} onClick={() => navigate("/")} >Home</li>
+                    <li className={`header__menu-item ${activePage === "/about" ? "header__menu-item--active" : ""}`} onClick={() => navigate("/about")} >About</li>
+                    <li className={`header__menu-item ${activePage === "/recipes" ? "header__menu-item--active" : ""}`} onClick={() => navigate("/recipes")} >Recipes</li>
                 </ul>
 
             </nav>
