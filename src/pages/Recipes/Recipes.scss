@@ -4,8 +4,12 @@
 
 .recipes {
     @include desktop {
-
+        position: relative;
         @include maxWidthAndCenter;
+        padding-bottom: 6rem;
+        &::after {
+            @include pageBreakBottom;
+        }
     }
 
     &__hero {
