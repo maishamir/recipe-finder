@@ -17,3 +17,30 @@
         @content;
     }
 }
+
+@mixin maxWidthAndCenter {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+@mixin pageBreakTop  {
+    content: "";
+    top: 0;
+    position: absolute;
+    height: 1px;
+    background-color: $neutral300;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin pageBreakBottom {
+    content: "";
+    bottom: 0;
+    position: absolute;
+    height: 1px;
+    background-color: $neutral300;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
