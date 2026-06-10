@@ -3,6 +3,11 @@
 @use "../../styles/partials/mixins" as *;
 
 .recipes {
+    @include desktop {
+
+        @include maxWidthAndCenter;
+    }
+
     &__hero {
         padding: 3rem 0;
 
@@ -15,7 +20,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                @include maxWidthAndCenter;
+                // @include maxWidthAndCenter;
 
             }
         }
@@ -59,11 +64,11 @@
         }
 
         @include desktop {
-            border: 1px solid red;
-            @include maxWidthAndCenter;
+            // @include maxWidthAndCenter;
+
             .recipeFIlter {
                 flex: 1;
-                
+
 
             }
 
@@ -116,7 +121,7 @@
         @include desktop {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            @include maxWidthAndCenter;
+            // @include maxWidthAndCenter;
         }
     }
 
