@@ -16,19 +16,11 @@
         justify-content: space-between;
         padding: 2.5rem 2rem;
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -2rem;
-            right: -2rem;
-            height: 1px;
-            background-color: $neutral300;
-        }
     }
 
     @include desktop {
-        padding: 2.5rem 7.75rem;
+        padding: 2rem 5.75rem;
+        max-width: 75%;
     }
 
     ul {

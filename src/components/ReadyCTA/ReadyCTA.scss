@@ -25,6 +25,14 @@
             right: -1rem;
             background-image: url("/assets/images/pattern-knife.svg");
             background-size: cover;
+
+            @include desktop {
+                height: 21.125rem;
+                width: 21.125rem;
+                background-image: url("/assets/images/pattern-knife.svg");
+                background-size: cover;
+                right: -5rem;
+            }
             // z-index: 0;
         }
 
@@ -40,12 +48,22 @@
             background-repeat: no-repeat;
             left: -1rem;
 
+            @include desktop {
+                height: 24.375rem;
+                width: 19.625rem;
+                left: -5rem;
+
+            }
+
         }
 
     }
 
     @include desktop {
-        margin-top: 6rem;
+        max-width: 75%;
+        margin: 6rem auto 0;
+        height: 24.75rem;
+        padding-top: 6rem;
     }
 
 
@@ -58,6 +76,8 @@
             position: relative;
             z-index: 2;
         }
+
+        
     }
 
     &-desc {

@@ -12,6 +12,7 @@
         &-text {
             @include desktop {
                 width: 50rem;
+                max-width: 50rem;
                 position: relative;
                 left: 50%;
                 transform: translateX(-50%);
@@ -85,8 +86,7 @@
 
         &-img {
             position: relative;
-            background-color: red;
-            width: 100%;
+            // width: auto;
 
             .squiggle {
                 position: absolute;
@@ -101,11 +101,16 @@
                 width: 100%;
                 border-radius: 3.45px;
                 outline: 4px solid white;
+                
 
                 @include desktop {
                     height: 33rem;
                     object-fit: cover;
                     outline: 1rem solid white;
+                    max-width: 75%;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
 
             }
@@ -194,6 +199,8 @@
             display: flex;
             align-items: center;
             gap: 3rem;
+            max-width: 75%;
+            margin: 0 auto;
         }
 
         .half-hour {

@@ -2,13 +2,16 @@
 
 .layout__container {
     padding: 1rem;
+    padding-bottom: 0;
 
     @include tablet {
         padding: 3rem 2rem;
+        padding-bottom: 0;
     }
 
     @include desktop {
         padding: 5rem 7.75rem;
+        padding-bottom: 0;
     }
 
 }
