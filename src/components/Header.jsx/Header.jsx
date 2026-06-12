@@ -15,7 +15,6 @@ function Header() {
 
     useEffect(() => {
         const clickHandler = e => {
-            // console.log(navRef.current);
             if (e.target.closest('.header__hamburger')) return;
             if (!(navRef.current.contains(e.target))) setMenuIsOpen(false);
 
