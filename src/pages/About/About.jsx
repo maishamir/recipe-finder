@@ -1,6 +1,6 @@
 import React from 'react'
-import heroImg from "/recipe-finder/assets/images/image-about-our-mission-small.webp";
-import heroImgLg from "/recipe-finder/assets/images/image-about-our-mission-large.webp";
+// import heroImg from "/recipe-finder/assets/images/image-about-our-mission-small.webp";
+// import heroImgLg from "/recipe-finder/assets/images/image-about-our-mission-large.webp";
 import beyondImg from '/recipe-finder/assets/images/image-about-beyond-the-plate-small.webp';
 import "./About.scss"
 import beyondImgLg from '/recipe-finder/assets/images/image-about-beyond-the-plate-large.webp';
@@ -25,8 +25,8 @@ function About() {
                 </div>
 
                 <picture>
-                    <source media="(min-width: 600px)" srcset={heroImgLg} />
-                    <img className="about__hero-img" src={heroImg} alt="" />
+                    <source media="(min-width: 600px)" srcset="/recipe-finder/assets/images/image-about-our-mission-large.webp" />
+                    <img className="about__hero-img" src="/recipe-finder/assets/images/image-about-our-mission-small.webp" alt="" />
                 </picture>
             </section>
 
@@ -80,8 +80,8 @@ function About() {
                     </ul>
                 </div>
                 <picture>
-                    <source media="(min-width: 600px )" srcset={beyondImgLg} />
-                    <img className="about__beyondPlate-img" src={beyondImg} alt="" />
+                    <source media="(min-width: 600px )" srcset='/recipe-finder/assets/images/image-about-beyond-the-plate-large.webp' />
+                    <img className="about__beyondPlate-img" src='/recipe-finder/assets/images/image-about-beyond-the-plate-small.webp' alt="" />
                 </picture>
             </section>
 
