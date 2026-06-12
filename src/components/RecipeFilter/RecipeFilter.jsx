@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import chevronDown from '/assets/images/icon-chevron-down.svg';
+import chevronDown from '../../assets/images/icon-chevron-down.svg';
 import "./RecipeFilter.scss";
 
 function RecipeFilter({ choices = [], label = "", toggleButton, isOpen, name = "", setTime, selectedValue, close }) {

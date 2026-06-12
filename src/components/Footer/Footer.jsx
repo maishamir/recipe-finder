@@ -1,7 +1,7 @@
 import React from 'react'
-import instaIcon from "/assets/images/icon-instagram.svg"
-import blueskyIcon from "/assets/images/icon-bluesky.svg"
-import tiktokIcon from "/assets/images/icon-tiktok.svg"
+import instaIcon from "../../assets/images/icon-instagram.svg"
+import blueskyIcon from "../../assets/images/icon-bluesky.svg"
+import tiktokIcon from "../../assets/images/icon-tiktok.svg"
 import "./Footer.scss"
 
 

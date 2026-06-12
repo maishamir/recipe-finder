@@ -1,9 +1,9 @@
 import React from 'react'
-import heroImg from "/assets/images/image-about-our-mission-small.webp";
-import heroImgLg from "/assets/images/image-about-our-mission-large.webp";
-import beyondImg from '/assets/images/image-about-beyond-the-plate-small.webp';
+import heroImg from "/recipe-finder/assets/images/image-about-our-mission-small.webp";
+import heroImgLg from "/recipe-finder/assets/images/image-about-our-mission-large.webp";
+import beyondImg from '/recipe-finder/assets/images/image-about-beyond-the-plate-small.webp';
 import "./About.scss"
-import beyondImgLg from '/assets/images/image-about-beyond-the-plate-large.webp';
+import beyondImgLg from '/recipe-finder/assets/images/image-about-beyond-the-plate-large.webp';
 import "./About.scss"
 import { useNavigate } from 'react-router';
 import ReadyCTA from '../../components/ReadyCTA/ReadyCTA';

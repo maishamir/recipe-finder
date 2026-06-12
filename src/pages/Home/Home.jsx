@@ -1,14 +1,13 @@
 import React from 'react'
-import heroImg from "/assets/images/image-home-hero-small.webp";
-import heroImgLg from "/assets/images/image-home-hero-large.webp";
-import carrotIcon from "/assets/images/icon-whole-food-recipes.svg";
-import boltIcon from "/assets/images/icon-minimum-fuss.svg";
-import searchIcon from "/assets/images/icon-search-in-seconds.svg";
-import realLifeImgDefault from "/assets/images/image-home-real-life-small.webp";
-import realLifeImgTablet from "/assets/images/image-home-real-life-large.webp";
-// import realLifeImgTablet from "/assets/images/salmon-asparagus-large.webp";
+import heroImg from "/recipe-finder/assets/images/image-home-hero-small.webp";
+import heroImgLg from "/recipe-finder/assets/images/image-home-hero-large.webp";
+import carrotIcon from "../../assets/images/icon-whole-food-recipes.svg";
+import boltIcon from "../../assets/images/icon-minimum-fuss.svg";
+import searchIcon from "../../assets/images/icon-search-in-seconds.svg";
+import realLifeImgDefault from "/recipe-finder/assets/images/image-home-real-life-small.webp";
+import realLifeImgTablet from "/recipe-finder/assets/images/image-home-real-life-large.webp";
 import "./Home.scss";
-import squiggle from "/assets/images/pattern-squiggle-1.svg";
+import squiggle from "../../assets/images/pattern-squiggle-1.svg";
 import { useNavigate } from 'react-router';
 import ReadyCTA from '../../components/ReadyCTA/ReadyCTA';
 

@@ -23,13 +23,13 @@
             width: 10rem;
             top: -3rem;
             right: -1rem;
-            background-image: url("/assets/images/pattern-knife.svg");
+            background-image: url("../../assets/images/pattern-knife.svg");
             background-size: cover;
 
             @include desktop {
                 height: 21.125rem;
                 width: 21.125rem;
-                background-image: url("/assets/images/pattern-knife.svg");
+                background-image: url("../../assets/images/pattern-knife.svg");
                 background-size: cover;
                 right: -5rem;
             }
@@ -43,7 +43,7 @@
             width: 10rem;
             bottom: -0.5rem;
             left: 0;
-            background-image: url("/assets/images/pattern-fork.svg");
+            background-image: url("../../assets/images/pattern-fork.svg");
             background-size: contain;
             background-repeat: no-repeat;
             left: -1rem;
