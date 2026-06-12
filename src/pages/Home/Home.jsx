@@ -1,11 +1,11 @@
 import React from 'react'
-import heroImg from "/recipe-finder/assets/images/image-home-hero-small.webp";
-import heroImgLg from "/recipe-finder/assets/images/image-home-hero-large.webp";
+// import heroImg from "/recipe-finder/assets/images/image-home-hero-small.webp";
+// import heroImgLg from "/recipe-finder/assets/images/image-home-hero-large.webp";
 import carrotIcon from "../../assets/images/icon-whole-food-recipes.svg";
 import boltIcon from "../../assets/images/icon-minimum-fuss.svg";
 import searchIcon from "../../assets/images/icon-search-in-seconds.svg";
-import realLifeImgDefault from "/recipe-finder/assets/images/image-home-real-life-small.webp";
-import realLifeImgTablet from "/recipe-finder/assets/images/image-home-real-life-large.webp";
+// import realLifeImgDefault from "/recipe-finder/assets/images/image-home-real-life-small.webp";
+// import realLifeImgTablet from "/recipe-finder/assets/images/image-home-real-life-large.webp";
 import "./Home.scss";
 import squiggle from "../../assets/images/pattern-squiggle-1.svg";
 import { useNavigate } from 'react-router';
@@ -29,8 +29,8 @@ function Home() {
                     <img src={squiggle} className="squiggle" alt="" />
 
                     <picture>
-                        <source media="(min-width: 1200px)" srcset={heroImgLg} />
-                        <img src={heroImg} className='woman' alt="woman chopping vegetables and smiling" />
+                        <source media="(min-width: 1200px)" srcset="/recipe-finder/assets/images/image-home-hero-large.webp" />
+                        <img src="/recipe-finder/assets/images/image-home-hero-small.webp" className='woman' alt="woman chopping vegetables and smiling" />
                     </picture>
                 </div>
 
@@ -80,9 +80,9 @@ function Home() {
 
 
                 <picture>
-                    <source media='(min-width: 600px)' srcSet={realLifeImgTablet} />
+                    <source media='(min-width: 600px)' srcSet="/recipe-finder/assets/images/image-home-real-life-large.webp" />
 
-                    <img className="home__real-life-img" src={realLifeImgDefault} alt="" />
+                    <img className="home__real-life-img" src="/recipe-finder/assets/images/image-home-real-life-small.webp" alt="" />
 
                 </picture>
             </section>
