@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import chevronDown from "/assets/images/icon-chevron-down.svg";
+import chevronDown from "../../assets/images/icon-chevron-down.svg";
 import "./Recipes.scss";
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
 import recipeData from "../../assets/data.json";

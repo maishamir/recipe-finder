@@ -3,9 +3,9 @@ import "./RecipeDetails.scss"
 import { useParams } from 'react-router'
 import recipeData from "../../assets/data.json";
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
-import servingIcon from "/assets/images/icon-servings.svg";
-import prepIcon from "/assets/images/icon-prep-time.svg";
-import cookIcon from "/assets/images/icon-cook-time.svg";
+import servingIcon from "../../assets/images/icon-servings.svg";
+import prepIcon from "../../assets/images/icon-prep-time.svg";
+import cookIcon from "../../assets/images/icon-cook-time.svg";
 import { Link } from 'react-router';
 
 function RecipeDetails() {

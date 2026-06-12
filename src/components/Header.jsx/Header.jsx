@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import "./Header.scss"
-import logo from "/assets/images/logo.svg"
-import hamburgerMenu from "/assets/images/icon-hamburger-menu.svg";
+import logo from "../../assets/images/logo.svg"
+import hamburgerMenu from "../../assets/images/icon-hamburger-menu.svg";
 import { Link, useLocation, useNavigate } from 'react-router';
 
 function Header() {

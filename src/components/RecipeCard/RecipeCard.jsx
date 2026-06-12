@@ -1,7 +1,8 @@
 import React from 'react'
-import servingIcon from "/assets/images/icon-servings.svg";
-import prepIcon from "/assets/images/icon-prep-time.svg";
-import cookIcon from "/assets/images/icon-cook-time.svg";
+// import servingIcon from "../../assets/images/icon-servings.svg";
+import servingIcon from "../../assets/images/icon-servings.svg"
+import prepIcon from "../../assets/images/icon-prep-time.svg";
+import cookIcon from "../../assets/images/icon-cook-time.svg";
 import { Link } from 'react-router';
 import "./RecipeCard.scss";
 
